@@ -1,17 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Axios from 'axios';
+// import { Accordion, Card, Button } from 'react-bootstrap';
 
-export default class Entree extends Component {
+
+
+export default class Appetizers extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            key: {},
             menuList: [],
             menuUrl: ""
         }
     }
     componentDidMount() {
-        Axios.get("https://entree-f18.herokuapp.com/v1/menu")
+        Axios.get("https://entree-f18.herokuapp.com/v1/menu/8")
             .then(response => {
                 const self = this
                 console.log(response);
@@ -24,14 +26,18 @@ export default class Entree extends Component {
     render() {
         return (
             <div>
-                <h2>
-                    this is the sub header
+            <h2>
+            
               </h2>
                 {this.state.menuList.map(menuList =>
-                    <div className="">
+                    <div>
                         <ul key={this.index}>
-                            {menuList.description.split(' with ')[0]} ${(menuList.description.length)}
+                        <hr></hr>
+                            <div className="liTitle">{menuList.description.split(' with ')[0]}</div>
+                            <div className="liDescription">with{menuList.description.split('with')[1]}</div>
+                            <div className="liPrice">${(menuList.description.length)}</div>
                         </ul>
+
                     </div>
                 )}
             </div>

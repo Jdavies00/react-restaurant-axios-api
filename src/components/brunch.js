@@ -4,7 +4,7 @@ import Axios from 'axios';
 
 
 
-export default class Appetizers extends Component {
+export default class Brunch extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,7 +13,7 @@ export default class Appetizers extends Component {
         }
     }
     componentDidMount() {
-        Axios.get("https://entree-f18.herokuapp.com/v1/menu/8")
+        Axios.get("https://entree-f18.herokuapp.com/v1/menu/15")
             .then(response => {
                 const self = this
                 console.log(response);

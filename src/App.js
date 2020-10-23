@@ -1,18 +1,23 @@
 // import React from 'react';
+import React, { Component } from 'react'
+import './App.css';
 import Header from './components/Header';
 import Menu from './components/Menu';
-import Footer from './components/Footer';
-import './App.css';
-import { Accordion, Card, Button } from 'react-bootstrap';
-import React, { Component } from 'react'
+import { Accordion, Card, Button, Container} from 'react-bootstrap';
 import Appetizers from './components/Appetizers';
+import Specials from './components/specials';
+import Entree from './components/Entree';
+import Latenight from './components/latenight';
+import Footer from './components/Footer';
+import Brunch from './components/brunch'
 
 export default class App extends Component {
   render() {
     return (
       <div className= "accordButton">
         <Header />
-        <Accordion defaultActiveKey="0">
+        <Container>
+        <Accordion defaultActiveKey="1">
           <Card>
             <Card.Header >
               <Accordion.Toggle as={Button} variant="link" eventKey="0" >
@@ -33,7 +38,7 @@ export default class App extends Component {
       </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey="1">
-              <Card.Body>Hello! I'm another body</Card.Body>
+              <Card.Body><Entree /></Card.Body>
             </Accordion.Collapse>
           </Card>
         </Accordion>
@@ -42,11 +47,11 @@ export default class App extends Component {
           <Card>
             <Card.Header>
               <Accordion.Toggle as={Button} variant="link" eventKey="2">
-                Click me!
+                Brunch
       </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey="2">
-              <Card.Body>Hello! I'm another body</Card.Body>
+              <Card.Body><Brunch /></Card.Body>
             </Accordion.Collapse>
           </Card>
         </Accordion>
@@ -55,11 +60,11 @@ export default class App extends Component {
           <Card>
             <Card.Header>
               <Accordion.Toggle as={Button} variant="link" eventKey="3">
-                Click me!
+                Specials
       </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey="3">
-              <Card.Body>Hello! I'm another body</Card.Body>
+              <Card.Body><Specials /></Card.Body>
             </Accordion.Collapse>
           </Card>
         </Accordion>
@@ -68,14 +73,18 @@ export default class App extends Component {
           <Card>
             <Card.Header>
               <Accordion.Toggle as={Button} variant="link" eventKey="3">
-                Click me!
+                Late Night
       </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey="3">
-              <Card.Body>Hello! I'm another body</Card.Body>
+              <Card.Body><Latenight /></Card.Body>
             </Accordion.Collapse>
           </Card>
         </Accordion>
+        <div>
+        </div>
+        </Container>
+        <Footer />
       </div>
      
     )

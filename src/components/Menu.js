@@ -18,11 +18,11 @@ export class Menu extends Component {
     componentDidMount() {
         Axios.get("https://entree-f18.herokuapp.com/v1/menu")
             .then(response => {
-                const self = this
+                // const self = this
                 console.log(response);
-                self.setState({ menuURL: response.data })
-                self.setState({ menuList: response.data.menu_items })
-                console.log(self.state.menuURL)
+                this.setState({ menuURL: response.data })
+                this.setState({ menuList: response.data.menu_items })
+                console.log(this.state.menuURL)
 
             });
     }
