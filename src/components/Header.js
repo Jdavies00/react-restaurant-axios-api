@@ -11,17 +11,3 @@ export default class Header extends Component {
         )
     }
 }
-
-
-// import React from 'react'
-
-// function Header(){
-//     return (
-//             <h1>
-//                 this is the header
-//             </h1>
-//     )
-// }
-
-
-// export default Header

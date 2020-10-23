@@ -2,6 +2,8 @@
   padding-top: 10px ;
   font-family: 'Pinyon Script';
   font-size: 70px;
+  color:rgb(255, 226, 61);
+  background-color: crimson;
   text-align: center;
 }
 
@@ -25,9 +27,10 @@
 
 }
 .accordButton{
-  font-family: 'Pinyon Script';
-  
   text-align: center;
-  
+}
+
+.footer{
+  text-align: left;
 
 }
